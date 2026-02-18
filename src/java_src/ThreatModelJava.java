@@ -73,6 +73,11 @@ public class ThreatModelJava {
         System.out.println("Re-Entered pass was: " + password.equals(reEnterPass));
     }
 
+    // TODO writes the user's name
+    // TODO writes the result of adding the two integer values (no overflow should occur)
+    // TODO writes the result of multiplying the two integer values (no overflow should occur)
+    // TODO writes the contents of the input file
+    // TODO Each thing written should be clearly labeled (e.g. First name, Last name, First Integer, Second Integer, Sum, Product, Input File Name, Input file contents)
     public static void writeToOutputFile() {
 
     }
