@@ -116,9 +116,4 @@ public class ThreatModelJava_Test {
         assertTrue("output file name may be like output.txt, output.java, output.c etc.",
                 ThreatModelJava.isValidFileName("input.c"));
     }
-
-    @Test
-    void test() {
-        System.out.println("");
-    }
 }

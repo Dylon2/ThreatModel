@@ -26,9 +26,6 @@ public class ThreatModelJava {
     public static void main(String[] args) {
         Scanner consoleScanner = new Scanner(System.in);
 
-        //System.out.println("--- A Special Week of regex ---");
-        // Because, y'know, John Umamusume?
-
         String firstName = "";
         while (true) {
             System.out.print("Enter First Name (1-50 chars, letters only): ");
