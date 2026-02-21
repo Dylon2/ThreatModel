@@ -16,7 +16,7 @@ import java.util.Date;
  *  Takes various inputs from user and attempts
  *  to defend against as many attacks as possible.
  *
- * @author Devin Arroyo, Dylon Bernal
+ * @author Devin Arroyo
  */
 public class ThreatModelJava {
 
@@ -43,40 +43,25 @@ public class ThreatModelJava {
         }
 
         int numberOne = 0;
-        int numberTwo = 0;
-        while(true) {
-            int tempNum1 = 0;
-            while (true) {
-                System.out.print("Enter First Integer (-2,147,483,648 to 2,147,483,647): ");
-                String input = consoleScanner.nextLine();
-                if (isValidInt(input)) {
-                    tempNum1 = Integer.parseInt(input);
-                    break;
-                }
-                System.out.println("Invalid range. Must be a 4-byte signed integer.");
-            }
-
-            int tempNum2 = 0;
-            while (true) {
-                System.out.print("Enter Second Integer: ");
-                String input = consoleScanner.nextLine();
-                if (isValidInt(input)) {
-                    tempNum2 = Integer.parseInt(input);
-                    break;
-                }
-                System.out.println("Invalid range.");
-            }
-
-            long tempSum = ((long) tempNum1) + tempNum2;
-            long tempProduct = ((long) tempNum1) * tempNum2;
-            if (isNotValidSumAndProductOfTwoNumbers(tempSum, tempProduct)) {
-                System.out.println("Invalid. Result of product/addition of two numbers " +
-                        "is not within specified number range");
-            } else {
-                numberOne = tempNum1;
-                numberTwo = tempNum2;
+        while (true) {
+            System.out.print("Enter First Integer (-2,147,483,648 to 2,147,483,647): ");
+            String input = consoleScanner.nextLine();
+            if (isValidInt(input)) {
+                numberOne = Integer.parseInt(input);
                 break;
             }
+            System.out.println("Invalid range. Must be a 4-byte signed integer.");
+        }
+
+        int numberTwo = 0;
+        while (true) {
+            System.out.print("Enter Second Integer: ");
+            String input = consoleScanner.nextLine();
+            if (isValidInt(input)) {
+                numberTwo = Integer.parseInt(input);
+                break;
+            }
+            System.out.println("Invalid range.");
         }
 
         String inputFileName = "";

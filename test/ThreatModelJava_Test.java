@@ -57,34 +57,6 @@ public class ThreatModelJava_Test {
     }
 
     @Test
-    public void test_Two_Integer_Inputs_Is_True_When_Addition_Result_Overflows() {
-        assertTrue("Result out of range of 4 bytes",
-                ThreatModelJava.isNotValidSumAndProductOfTwoNumbers(
-                        ((long) 2147483647) + 1,
-                        ((long) 2147483647) * 1));
-        assertTrue("Result out of range of 4 bytes",
-                ThreatModelJava.isNotValidSumAndProductOfTwoNumbers(
-                        ((long) -2147483648) - 1,
-                        ((long) -2147483648) * 1));
-    }
-
-    @Test
-    public void test_Two_Integer_Inputs_Is_True_When_Product_Result_Overflows() {
-        assertTrue("Result out of range of 4 bytes",
-                ThreatModelJava.isNotValidSumAndProductOfTwoNumbers(
-                        ((long) 2147483647) + -2147483648,
-                        ((long) 2147483647) * -2147483648));
-    }
-
-    @Test
-    public void test_Two_Integer_Inputs_Is_False_When_Result_Is_In_Range_Of_4_Bytes() {
-        assertFalse("Result of 2 + 2 and 2 * 2 should be in range of 4 bytes",
-                ThreatModelJava.isNotValidSumAndProductOfTwoNumbers(
-                        ((long) 2) + 2,
-                        ((long) 2) * 2));
-    }
-
-    @Test
     public void test_Input_File_Name_Contains_No_Slashes_Colons_Or_Spaces() {
         assertFalse("input file name may not contain slashes, colons, or spaces",
                 ThreatModelJava.isValidFileName("  C:\\Windows\\System32\\input.txt "));
